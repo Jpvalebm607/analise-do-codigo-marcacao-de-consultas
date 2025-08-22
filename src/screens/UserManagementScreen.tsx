@@ -1,3 +1,10 @@
+/**
+ * [Tela] UserManagementScreen
+ * Responsabilidade:
+ *  - Permitir ao admin listar/criar/editar/remover usuários (médicos/pacientes).
+ * Segurança:
+ *  - Acesso restrito apenas a admins.
+ */
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
 import { ScrollView, ViewStyle, TextStyle } from 'react-native';

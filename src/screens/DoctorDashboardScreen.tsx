@@ -1,3 +1,10 @@
+/**
+ * [Tela] DoctorDashboardScreen
+ * Responsabilidade:
+ *  - Listar consultas associadas ao médico logado.
+ * Ações:
+ *  - Permitir confirmar, cancelar ou remarcar consultas via modal.
+ */
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
 import { ScrollView, ViewStyle, TextStyle } from 'react-native';

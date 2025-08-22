@@ -1,3 +1,10 @@
+/**
+ * [Tela] HomeScreen
+ * Responsabilidade:
+ *  - Hub inicial após login com atalhos para dashboards e criação de consultas.
+ * Personalização:
+ *  - CTA alterado conforme user.tipo.
+ */
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/native';
 import { FlatList, RefreshControl, TouchableOpacity } from 'react-native';

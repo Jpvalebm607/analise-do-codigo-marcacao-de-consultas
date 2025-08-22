@@ -1,3 +1,8 @@
+/**
+ * [Tela] NotificationsScreen
+ * Responsabilidade:
+ *  - Exibir notificações (lembretes, confirmações) vindas de services/notifications.
+ */
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
 import { ScrollView, ViewStyle, Alert } from 'react-native';

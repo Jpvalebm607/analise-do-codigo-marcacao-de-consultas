@@ -1,3 +1,10 @@
+/**
+ * [Tela] AdminDashboardScreen
+ * Responsabilidade:
+ *  - Visão geral do sistema (métricas e links para gestão de usuários).
+ * Fonte:
+ *  - services/statistics + services/appointments
+ */
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
 import { ScrollView, ViewStyle, TextStyle } from 'react-native';

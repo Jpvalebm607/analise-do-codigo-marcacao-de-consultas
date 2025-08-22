@@ -1,3 +1,10 @@
+/**
+ * [Tela] SettingsScreen
+ * Responsabilidade:
+ *  - Configurações do app: tema, notificações e conta.
+ * Persistência:
+ *  - Salvar preferências em AsyncStorage se desejado.
+ */
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
 import { ScrollView, ViewStyle, Alert, Share } from 'react-native';

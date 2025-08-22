@@ -1,3 +1,10 @@
+/**
+ * [Tela] PatientDashboardScreen
+ * Responsabilidade:
+ *  - Listar consultas do paciente logado com detalhes (médico, data, horário).
+ * Fonte de dados:
+ *  - services/appointments.listByPatient(user.id | user.nome)
+ */
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
 import { ScrollView, ViewStyle, TextStyle } from 'react-native';
