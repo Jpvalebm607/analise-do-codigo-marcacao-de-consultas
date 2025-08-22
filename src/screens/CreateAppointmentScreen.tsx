@@ -1,3 +1,12 @@
+/**
+ * [Tela] CreateAppointmentScreen
+ * Responsabilidade:
+ *  - Fluxo de agendamento: seleção de data, horário e médico.
+ * Persistência:
+ *  - Salva consulta via services/appointments (emulando backend ou AsyncStorage local).
+ * Validação:
+ *  - Não permitir salvar sem todos os campos preenchidos.
+ */
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
 import { ScrollView, ViewStyle } from 'react-native';
