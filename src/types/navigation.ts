@@ -1,4 +1,11 @@
 /**
+ * [Tipos] navigation.ts
+ * Responsabilidade:
+ *  - Declarações de tipos para User, Appointment, Doctor, Navigation Params.
+ * Benefício:
+ *  - Tipagem segura, autocompletar e prevenção de erros por contrato de dados.
+ */
+/**
  * Tipos relacionados à navegação
  * Este arquivo contém todas as definições de tipos necessárias para a navegação entre telas
  */
