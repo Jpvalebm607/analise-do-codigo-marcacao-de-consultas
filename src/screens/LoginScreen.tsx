@@ -1,3 +1,12 @@
+/**
+ * [Tela] LoginScreen
+ * Responsabilidade:
+ *  - Capturar credenciais, validar e chamar AuthContext.login.
+ * Fluxo:
+ *  - Inputs (email/senha) -> validação -> service/auth -> setUser -> navegação por perfil.
+ * Feedback:
+ *  - Exibir loading durante requisição e erro em caso de credenciais inválidas.
+ */
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
 import { Input, Button, Text } from 'react-native-elements';

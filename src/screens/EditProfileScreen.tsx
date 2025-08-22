@@ -1,3 +1,10 @@
+/**
+ * [Tela] EditProfileScreen
+ * Responsabilidade:
+ *  - Formulário para atualizar dados do usuário (nome, email, especialidade).
+ * Fluxo:
+ *  - Preencher com dados atuais -> validação -> salvar via service -> atualizar contexto.
+ */
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
 import { ScrollView, ViewStyle, Alert } from 'react-native';

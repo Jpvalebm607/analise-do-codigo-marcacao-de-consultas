@@ -1,3 +1,11 @@
+/**
+ * [Tela] ProfileScreen
+ * Responsabilidade:
+ *  - Exibir dados do usuário autenticado e permitir logout/editar perfil.
+ * Renderização condicional:
+ *  - Se user.tipo === "medico", mostra especialidade.
+ *  - Diferenciar ações (admin pode ver controles diferentes).
+ */
 import React from 'react';
 import styled from 'styled-components/native';
 import { Button, ListItem } from 'react-native-elements';

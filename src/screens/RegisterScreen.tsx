@@ -1,3 +1,12 @@
+/**
+ * [Tela] RegisterScreen
+ * Responsabilidade:
+ *  - Registrar novo paciente (ou encaminhar admin para cadastrar médicos).
+ * Fluxo:
+ *  - Form -> valida -> persiste via service -> redireciona para login.
+ * Segurança:
+ *  - Em produção, sempre validar no servidor e não armazenar senha em texto.
+ */
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
 import { Input, Button, Text } from 'react-native-elements';
