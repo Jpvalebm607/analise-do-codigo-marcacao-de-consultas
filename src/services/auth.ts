@@ -1,3 +1,12 @@
+/**
+ * [Serviço] NOME_DO_SERVIÇO auth.ts
+ * Responsabilidade:
+ *  - Encapsular lógica de negócio: criar, listar, atualizar, deletar.
+ * Persistência:
+ *  - Pode usar AsyncStorage (chave "consultas") ou fazer chamadas HTTP a uma API.
+ * Notas:
+ *  - Salvar datas como ISO string e normalizar com new Date() ao ler.
+ */
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { User, LoginCredentials, RegisterData, AuthResponse } from '../types/auth';
 
