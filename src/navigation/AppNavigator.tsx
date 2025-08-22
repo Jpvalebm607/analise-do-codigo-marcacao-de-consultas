@@ -1,10 +1,28 @@
+/**
+ * [Navegação] AppNavigator
+ * Responsabilidade:
+ *  - Definir stacks/tabs e guardas de rota baseadas em autenticação/perfil.
+ * Fluxo:
+ *  - Lê user do AuthContext → decide rotas públicas x privadas.
+ * Regras por perfil:
+ *  - admin -> AdminDashboard, UserManagement
+ *  - medico -> DoctorDashboard
+ *  - paciente -> PatientDashboard, CreateAppointment
+ */
+// Importa React
 import React from 'react';
+
+// Importa container de navegação e criador de pilha nativa
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// Importa hook de autenticação
 import { useAuth } from '../contexts/AuthContext';
+
+// Importa tipos de navegação
 import { RootStackParamList } from '../types/navigation';
 
-// Screens
+// Importa todas as telas do app
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import HomeScreen from '../screens/HomeScreen';
@@ -17,31 +35,34 @@ import PatientDashboardScreen from '../screens/PatientDashboardScreen';
 import NotificationsScreen from '../screens/NotificationsScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
+// Cria a pilha de navegação tipada com RootStackParamList
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
+// Componente principal de navegação
 export const AppNavigator: React.FC = () => {
-  const { user, loading } = useAuth();
+  const { user, loading } = useAuth(); // Obtém usuário e estado de loading
 
   if (loading) {
-    return null; // Ou um componente de loading
+    return null; // Enquanto carrega, retorna null ou pode ser um componente de loading
   }
 
   return (
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          headerShown: false,
+          headerShown: false, // Remove cabeçalho padrão para todas as telas
         }}
       >
         {!user ? (
-          // Rotas públicas
+          // Rotas públicas para usuários não autenticados
           <>
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen name="Register" component={RegisterScreen} />
           </>
         ) : (
-          // Rotas protegidas
+          // Rotas protegidas para usuários autenticados
           <>
+            {/* Rotas específicas por papel do usuário */}
             {user.role === 'admin' && (
               <Stack.Screen 
                 name="AdminDashboard" 
@@ -102,4 +123,4 @@ export const AppNavigator: React.FC = () => {
       </Stack.Navigator>
     </NavigationContainer>
   );
-}; 
+};
